@@ -33,6 +33,5 @@ yarn-error.log*
 .netlify
 .vs/slnx.sqlite
 .vs/netlify-portfolio/FileContentIndex/read.lock
-.vs/netlify-portfolio/FileContentIndex/6c542f29-11e2-4de2-bba2-150ebca8dba8.vsidx
-.vs/netlify-portfolio/FileContentIndex/b22d0b6e-5e0a-4c5d-b380-c57592d619b0.vsidx
 *.vsidx
+.vs/netlify-portfolio/v17/.suo

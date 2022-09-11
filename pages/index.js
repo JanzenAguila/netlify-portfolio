@@ -1,23 +1,32 @@
-import Head from 'next/head'
-import Header from '@components/Header'
-import Footer from '@components/Footer'
+import Head from 'next/head';
+import Header from 'components/Header';
+import Footer from 'components/Footer';
+
+import { useEffect } from 'react';
+import animateTitle from 'components/TitleAnim/TitleAnimation';
 
 export default function Home() {
-  return (
-    <div className="container">
-      <Head>
-        <title>Next.js Starter!</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    useEffect(() => {
+        const startAnimation = async () => {
+            if (document)
+                await animateTitle("Janzen - Home");
+        }
+        startAnimation();
+    }, []);
 
-      <main>
-        Hello, I am <Header title="Janzen Christian Aguila" subtitle="and welcome to my portfolio" />
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
-      </main>
+    return (
+      <div className="container">
+          <main>
+            <div class="image-cropper">
+                <img src="/profile.jpg" />
+            </div>
+            Hello, I am <Header title="Janzen Christian Aguila" subtitle="and welcome to my portfolio" />
+            <p className="description">
+                Get started by editing <code>pages/index.js</code>
+            </p>
+          </main>
 
-      <Footer />
-    </div>
-  )
+          <Footer />
+       </div>
+    )
 }
