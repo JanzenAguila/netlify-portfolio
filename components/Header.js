@@ -1,0 +1,8 @@
+export default function Header({ title, subtitle }) {
+    return (
+        <>
+            <h1 className="title">{title}</h1>
+            <p className="description">{subtitle}</p>
+        </>
+    );
+}
