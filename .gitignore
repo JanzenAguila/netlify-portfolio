@@ -35,3 +35,4 @@ yarn-error.log*
 .vs/netlify-portfolio/FileContentIndex/read.lock
 *.vsidx
 .vs/netlify-portfolio/v17/.suo
+.vs/VSWorkspaceState.json

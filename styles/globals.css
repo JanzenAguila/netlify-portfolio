@@ -27,7 +27,6 @@ code {
 }
 
 .container {
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -40,14 +39,41 @@ code {
     }
 
     body {
-        color: white;
-        background: black;
+        color: #ffffff !important;
+        background: #121212 !important;
     }
 
     code {
-        background: #808080;
+        background: #808080 !important;
+        color: #ffffff !important;
         border-radius: 5px;
         padding: 0.75rem;
         font-family: Menlo, Monaco, Lucida Console, Courier New, monospace;
     }
+}
+
+.dark-mode {
+    color: #ffffff !important;
+    background: #121212 !important;
+}
+
+.dark-mode code {
+    background: #808080 !important;
+    color: #ffffff !important;
+    border-radius: 5px;
+    padding: 0.75rem;
+    font-family: Menlo, Monaco, Lucida Console, Courier New, monospace;
+}
+
+.light-mode {
+    color: black !important;
+    background: #ffffff !important;
+}
+
+.light-mode code {
+    background: #fafafa !important;
+    color: #000000 !important;
+    border-radius: 5px;
+    padding: 0.75rem;
+    font-family: Menlo, Monaco, Lucida Console, Courier New, monospace;
 }

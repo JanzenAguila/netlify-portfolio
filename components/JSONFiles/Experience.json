@@ -1,0 +1,42 @@
+[
+    {
+        "id":  "/#gma-nmi",
+        "name": "GMA New Media Inc.",
+        "description": [
+            "Worked as an associate developer for GMA NMI, a subsidiary of GMA Network.",
+            "Developed several modules for the backend of multiple projects, as well as worked on optimizing the UI for the same projects."
+        ],
+        "logo": "nmi-logo.png",
+        "role": "Associate Developer",
+        "start": {
+            "month": "November",
+            "day": 4,
+            "year": 2021
+        },
+        "end": null,
+        "technologies": [ "Python", "XML", "VanillaJS", "PHP", "NodeJS", "ReactJS", "MySQL", "AWS SES", "AWS", "Paymongo API" ],
+        "url": "https://www.gmanmi.com/"
+    },
+    {
+        "id": "/#ics-uplb",
+        "name": "Institute of Computer Science, UPLB",
+        "description": [
+            "Worked as a software developer intern for ICS UPLB and helped in developing a database system for Makiling Biodiversity from an existing PHP application.",
+            "Had a paper published on <a href=\"https://www.academia.edu/\">Academia</a> entitled <b>\"Updating of Makiling Biodiversity Information System (MakiBIS) and Analysis of Biodiversity Data</b>\"."
+        ],
+        "logo": "ics-logo.png",
+        "role": "Software Developer Intern",
+        "start": {
+            "month": "June",
+            "day": null,
+            "year": 2019
+        },
+        "end": {
+            "month": "July",
+            "day": null,
+            "year": 2019
+        },
+        "technologies": [ "VanillaJS", "PHP", "NodeJS", "ReactJS", "MySQL" ],
+        "url": "http://ics.uplb.edu.ph/"
+    }
+]

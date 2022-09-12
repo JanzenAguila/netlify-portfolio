@@ -1,0 +1,21 @@
+.experienceContainer {
+    display: flex;
+    flex-direction: row;
+    min-height: 25em;
+}
+
+.experienceDescription {
+    width: 50vw;
+    margin-top: -3em;
+    padding-left: 3em;
+}
+
+.experienceLogo {
+    min-height: 10em;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 10em;
+}
