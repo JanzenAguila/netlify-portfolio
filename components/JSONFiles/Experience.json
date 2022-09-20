@@ -1,6 +1,6 @@
 [
     {
-        "id":  "/#gma-nmi",
+        "id": "/#gma-nmi",
         "name": "GMA New Media Inc.",
         "description": [
             "Worked as an associate developer for GMA NMI, a subsidiary of GMA Network.",
@@ -16,6 +16,23 @@
         "end": null,
         "technologies": [ "Python", "XML", "VanillaJS", "PHP", "NodeJS", "ReactJS", "MySQL", "AWS SES", "AWS", "Paymongo API" ],
         "url": "https://www.gmanmi.com/"
+    },
+    {
+        "id": "/#freelance",
+        "name": "Freelance",
+        "description": [
+            "Worked as a part-time freelance software developer."
+        ],
+        "logo": "",
+        "role": "Freelancer",
+        "start": {
+            "month": "September",
+            "day": 13,
+            "year": 2022
+        },
+        "end": null,
+        "technologies": [ "C#", "XML" ],
+        "url": ""
     },
     {
         "id": "/#ics-uplb",

@@ -23,7 +23,7 @@ export default function Education() {
 
     return (
         <>
-            <div>
+            <div className="align-self-start">
                 <h1>My Education</h1>
                 <div className={styles.educationContainer}>
                     {

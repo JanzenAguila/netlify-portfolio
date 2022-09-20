@@ -1,16 +1,16 @@
-.educationContainer {
+.affiliationContainer {
     display: flex;
     flex-direction: row;
     min-height: 25em;
 }
 
-.educationDescription {
+.affiliationDescription {
     width: 50vw;
     margin-top: -3em;
     padding-left: 3em;
 }
 
-.educationLogo {
+.affiliationLogo {
     min-height: 10em;
     display: flex;
     align-items: center;

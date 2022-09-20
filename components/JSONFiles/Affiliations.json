@@ -1,0 +1,67 @@
+[
+    {
+        "name": "University of the Philippines Sentai Ongaku Manga Anime Soshiki",
+        "acronym": "UP SOMA Soshiki",
+        "description": "",
+        "id": "/#up-soma-soshiki",
+        "logo": "SOMA-logo.png",
+        "positions": [
+            {
+                "position": "Publicity Committee Head",
+                "duration": {
+                    "start": {
+                        "month": "August",
+                        "day": null,
+                        "year": 2018
+                    },
+                    "end": {
+                        "month": "August",
+                        "day": null,
+                        "year": 2020
+                    }
+                }
+            },
+            {
+                "position": "Resident Member",
+                "duration": {
+                    "start": {
+                        "month": "March",
+                        "day": null,
+                        "year": 2018
+                    },
+                    "end": {
+                        "month": "August",
+                        "day": null,
+                        "year": 2021
+                    }
+                }
+            }
+        ],
+        "url": "https://web.facebook.com/upsomasoshiki/"
+    },
+    {
+        "name": "Alliance of Computer Science Students UPLB",
+        "acronym": "ACSS UPLB",
+        "description": "",
+        "id": "/#acss-uplb",
+        "logo": "ACSS-logo.png",
+        "positions": [
+            {
+                "position": "Developer",
+                "duration": {
+                    "start": {
+                        "month": "March",
+                        "day": null,
+                        "year": 2018
+                    },
+                    "end": {
+                        "month": "August",
+                        "day": null,
+                        "year": 2021
+                    }
+                }
+            }
+        ],
+        "url": "https://web.facebook.com/ACSSPH/"
+    }
+]

@@ -14,7 +14,15 @@ export default function Experience() {
         }
         return (
             <>
-                <div className={ styles.experienceLogo }><a href={experience.url} target="_blank"><img src={ `/${ experience.logo }` }/></a></div>
+                <div className={styles.experienceLogo}>
+                    <a href={experience.url} target="_blank">
+                        { experience.logo == "" ?
+                            <img className={styles.logo} src={`/${process.env.NEXT_PUBLIC_WEBSITE_LOGO}`} />
+                            :
+                            <img className={styles.logo} src={`/${experience.logo}`} />
+                        }
+                    </a>
+                </div>
                 <h3>{ `${experience.role}` }</h3>
                 <h6>{ `${experience.start.month} ${experience.start.year} - ${expEnd}` }</h6>
                 <ul>
@@ -32,7 +40,7 @@ export default function Experience() {
 
     return (
         <>
-            <div>
+            <div className="align-self-start">
                 <h1>My Experiences</h1>
                 <div className={styles.experienceContainer}>
                     {

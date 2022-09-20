@@ -1,20 +1,7 @@
 [
     {
-        "name": "Email",
-        "url": "mailto:janzenaguila@gmail.com",
-        "description": "Send me an email",
-        "icon": "FaMailBulk"
-    },
-    {
-        "name": "GitHub",
-        "url": "https://github.com/JanzenAguila",
-        "description": "Check out my GitHub",
-        "icon": "FaGithub"
-    },
-    {
-        "name": "LinkedIn",
-        "url": "https://www.linkedin.com/in/janzenaguila/",
-        "description": "View my LinkedIn profile",
-        "icon": "FaLinkedinIn"
+        "name": "Updating of Makiling Biodiversity Information System (MakiBIS) and Analysis of Biodiversity Data",
+        "description": "MakiBIS publication",
+        "url": "https://www.academia.edu/65253420/Updating_of_Makiling_Biodiversity_Information_System_MakiBIS_and_Analysis_of_Biodiversity_Data"
     }
 ]
