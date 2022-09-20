@@ -1,8 +1,9 @@
 import Head from 'next/head';
 import Header from 'components/Header';
 import Footer from 'components/Footer';
-import Experience from 'components/Experience/Experience';
+import Affiliations from 'components/Affiliations/Affiliations';
 import Education from 'components/Education/Education';
+import Experience from 'components/Experience/Experience';
 
 import { useEffect } from 'react';
 import animateTitle from 'components/TitleAnim/TitleAnimation';
@@ -30,6 +31,7 @@ export default function Home() {
           </main>
           <Experience />
           <Education />
+          <Affiliations />
           {/* <button onClick={() => toggleDarkMode()}>Toggle</button> */}
 
           <Footer />
