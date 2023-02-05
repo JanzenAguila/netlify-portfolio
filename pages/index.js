@@ -24,10 +24,9 @@ export default function Home() {
             <div className="image-cropper">
                 <img src="/profile.jpg" />
             </div>
-            Hello! I am <Header title="Janzen Christian Aguila" subtitle="and welcome to my portfolio" />
-            <p className="description">
-                Get started by editing <code>pages/index.js</code>
-            </p>
+            <div className="d-flex flex-column align-items-center">
+                Hello! I am <Header title="Janzen Christian Aguila" subtitle="and welcome to my portfolio" />
+            </div>
           </main>
           <Experience />
           <Education />
