@@ -1,20 +1,225 @@
 [
     {
-        "name": "Email",
-        "url": "mailto:janzenaguila@gmail.com",
-        "description": "Send me an email",
-        "icon": "FaMailBulk"
-    },
-    {
-        "name": "GitHub",
-        "url": "https://github.com/JanzenAguila",
-        "description": "Check out my GitHub",
-        "icon": "FaGithub"
-    },
-    {
-        "name": "LinkedIn",
-        "url": "https://www.linkedin.com/in/janzenaguila/",
-        "description": "View my LinkedIn profile",
-        "icon": "FaLinkedinIn"
+        "Languages": [
+            {
+                "name": "C",
+                "logo": "C.png",
+                "level": "Intermediate"
+            },
+            {
+                "name": "C#",
+                "logo": "",
+                "level": "Basic"
+            },
+            {
+                "name": "CSS",
+                "logo": "CSS.png",
+                "level": "Advanced"
+            },
+            {
+                "name": "HTML",
+                "logo": "HTML.png",
+                "level": "Advanced"
+            },
+            {
+                "name": "Java",
+                "logo": "Java.png",
+                "level": "Intermediate"
+            },
+            {
+                "name": "JavaScript",
+                "logo": "JavaScript.png",
+                "level": "Intermediate"
+            },
+            {
+                "name": "Kotlin",
+                "logo": "",
+                "level": "Basic"
+            },
+            {
+                "name": "MongoDB",
+                "logo": "MongoDB.png",
+                "level": "Intermediate"
+            },
+            {
+                "name": "MySQL",
+                "logo": "MySQL.png",
+                "level": "Intermediate"
+            },
+            {
+                "name": "PHP",
+                "logo": "PHP.png",
+                "level": "Basic"
+            },
+            {
+                "name": "PostgreSQL",
+                "logo": "PostgreSQL.png",
+                "level": "Basic"
+            },
+            {
+                "name": "Python",
+                "logo": "Python.png",
+                "level": "Advanced"
+            },
+            {
+                "name": "R",
+                "logo": "R.png",
+                "level": "Basic"
+            },
+            {
+                "name": "XML",
+                "logo": "XML.png",
+                "level": "Intermediate"
+            }
+        ],
+        "Frameworks": [
+            {
+                "name": "Bootstrap",
+                "logo": "",
+                "level": "Intermediate"
+            },
+            {
+                "name": "CodeIgniter",
+                "logo": "",
+                "level": "Basic"
+            },
+            {
+                "name": "Elastic Email",
+                "logo": "",
+                "level": "Basic"
+            },
+            {
+                "name": "Next.js",
+                "logo": "",
+                "level": "Intermediate"
+            },
+            {
+                "name": "Phaser 3",
+                "logo": "",
+                "level": "Basic"
+            },
+            {
+                "name": "Node JS",
+                "logo": "",
+                "level": "Advanced"
+            },
+            {
+                "name": "React",
+                "logo": "",
+                "level": "Advanced"
+            },
+            {
+                "name": "Unity",
+                "logo": "",
+                "level": "Basic"
+            },
+        ],
+        "ERP": [
+            {
+                "name": "Odoo",
+                "logo": "",
+                "level": "Intermediate"
+            }
+        ],
+        "Applications": [
+            {
+                "name": "Adobe After Effects",
+                "logo": "",
+                "level": "Intermediate"
+            },
+            {
+                "name": "Adobe Photoshop",
+                "logo": "",
+                "level": "Advanced"
+            },
+            {
+                "name": "Adobe Premiere",
+                "logo": "",
+                "level": "Intermediate"
+            },
+            {
+                "name": "Figma",
+                "logo": "",
+                "level": "Basic"
+            },
+            {
+                "name": "Git",
+                "logo": "",
+                "level": "Advanced"
+            },
+            {
+                "name": "Google Workspace",
+                "logo": "",
+                "level": "Advanced"
+            },
+            {
+                "name": "Medibang Paint",
+                "logo": "",
+                "level": "Intermediate"
+            },
+            {
+                "name": "Microsoft Word",
+                "logo": "",
+                "level": "Advanced"
+            },
+            {
+                "name": "Microsoft Powerpoint",
+                "logo": "",
+                "level": "Advanced"
+            },
+            {
+                "name": "Microsoft Excel",
+                "logo": "",
+                "level": "Intermediate"
+            },
+            {
+                "name": "Shopify",
+                "logo": "",
+                "level": "Basic",
+		"sample": "tirzzvdoomtmostmcw@tmmwj.com"
+            }
+        ],
+        "Others": [
+            {
+                "name": "Android Device Reformat",
+                "description": "Reformatted android devices and set-up applications"
+            },
+            {
+                "name": "Android Device Recovery",
+                "description": "Backed up android device data and successfully flashed firmwares multiple times to recover android devices"
+            },
+            {
+                "name": "Computer Hardware Modifications",
+                "description": "Changed computer parts (eg. RAM, Hard drives, SSDs, Fans) on several occasions"
+            },
+            {
+                "name": "Computer Reformat and OS Installation",
+                "description": "Reformatted computers, resintalled operating systems, set-up dual boot, and set-up applications"
+            },
+            {
+                "name": "Computer Troubleshooting",
+                "description": "Fixed common errors on Windows devices"
+            },
+            {
+                "name": "Digital Illustration",
+                "description": "Drew illustrations from scratch using illustration software"
+            },
+            {
+                "name": "General Photo Editing",
+                "description": "Made several photo edits on several occasions (eg. tarpaulins, publicity materials, t-shirt designs, asset creation)"
+            },
+            {
+                "name": "General Video Editing",
+                "description": "Edited several videos on several occasions (eg. trailers, teasers, indie movies, photo slideshows)"
+            },
+            {
+                "name": "Social Media Metrics",
+                "description": "Tracked social media metrics for social media accounts for one of my organizations, and took action on increasing reach and interaction"
+            },
+            {
+                "name": "Web Hosting and Deployment",
+                "description": "Experienced deploying applications on different hosting platforms like AWS, Heroku, Netlify, Firebase"
+            }
+        ]
     }
 ]

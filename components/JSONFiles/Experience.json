@@ -1,5 +1,22 @@
 [
     {
+        "id": "/#ey-gds",
+        "name": "EY GDS Philippines",
+        "description": [
+            "Worked as an intelligent automation consultant for EY GDS Philippines."
+        ],
+        "logo": "ey-logo.png",
+        "role": "Intelligent Automation Consultant",
+        "start": {
+            "month": "February",
+            "day": 6,
+            "year": 2023
+        },
+        "end": null,
+        "technologies": [ "N/A" ],
+        "url": "https://www.ey.com/en_ph/"
+    },
+    {
         "id": "/#gma-nmi",
         "name": "GMA New Media Inc.",
         "description": [
@@ -13,7 +30,11 @@
             "day": 4,
             "year": 2021
         },
-        "end": null,
+        "end": {
+            "month": "January",
+            "day": 20,
+            "year": 2023
+        },
         "technologies": [ "Python", "XML", "VanillaJS", "PHP", "NodeJS", "ReactJS", "MySQL", "AWS SES", "AWS", "Paymongo API" ],
         "url": "https://www.gmanmi.com/"
     },
@@ -45,12 +66,12 @@
         "role": "Software Developer Intern",
         "start": {
             "month": "June",
-            "day": null,
+            "day": 10,
             "year": 2019
         },
         "end": {
             "month": "July",
-            "day": null,
+            "day": 11,
             "year": 2019
         },
         "technologies": [ "VanillaJS", "PHP", "NodeJS", "ReactJS", "MySQL" ],

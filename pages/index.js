@@ -21,7 +21,7 @@ export default function Home() {
     return (
       <div className="container">
           <main>
-            <div class="image-cropper">
+            <div className="image-cropper">
                 <img src="/profile.jpg" />
             </div>
             Hello! I am <Header title="Janzen Christian Aguila" subtitle="and welcome to my portfolio" />

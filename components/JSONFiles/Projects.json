@@ -1,11 +1,87 @@
 [
     {
-        "name": "Test",
+        "name": "Sureseats theater booking application",
+        "cover": "",
+        "description": "Ayala Land Inc.",
+        "images": [],
+        "teammates": [ "Alvin Niño Aragon", "Arvin Ebon", "Diether Marcelo", "Jason Raymond Reyes", "John Paul Llapitan", "Mark David Bogayan" ],
+        "technologies": [ "AWS", "Elastic Email", "MySQL", "NodeJS", "Paymongo API", "PHP", "ReactJS" ],
+        "url": "",
+        "year": 2022
+    },
+    {
+        "name": "POS System with Odoo",
+        "cover": "",
+        "description": "Mekeni Food Corporation",
+        "images": [],
+        "teammates": [ "Alvin Niño Aragon", "Frank Anthony Chin" ],
+        "technologies": [ "Odoo Community 14", "Odoo SH", "Python", "VanillaJS", "XML" ],
+        "url": "",
+        "year": 2021
+    },
+    {
+        "name": "TextSimEngine: A text-based game-engine for the web",
         "cover": "",
         "description": "",
         "images": [],
-        "technologies": [],
+        "technologies": [ "MariaDB", "NodeJS", "ReactJS" ],
         "url": "",
-        "year": 2000
+        "year": 2019
+    },
+    {
+        "name": "Makiling Biodiversity Information System (MAKIBIS)",
+        "cover": "",
+        "description": "",
+        "images": [],
+        "teammates": [ "Andrea Nicole Cuevas", "Clouie Ann Mesina", "Jandrel Ian Valerio", "Kimberly Baylon", "Twinkle Marie Santos" ],
+        "technologies": [ "CodeIgniter", "MariaDB", "NodeJS", "ReactJS" ],
+        "url": "",
+        "year": 2019
+    },
+    {
+        "name": "GachaWaif Discord Bot",
+        "cover": "",
+        "description": "",
+        "images": [],
+        "technologies": [ "Discord API", "Python" ],
+        "url": "",
+        "year": 2019
+    },
+    {
+        "name": "Moodle web application remake",
+        "cover": "",
+        "description": "",
+        "images": [],
+        "technologies": [ "MariaDB", "NodeJS", "ReactJS" ],
+        "url": "",
+        "year": 2018
+    },
+    {
+        "name": "Alumni Management System",
+        "cover": "",
+        "description": "",
+        "images": [],
+        "teammates": [ "Daimler Flores", "Hanz Abaca" ],
+        "technologies": [ "Python" ],
+        "url": "",
+        "year": 2018
+    },
+    {
+        "name": "Balloon Fight remake",
+        "cover": "",
+        "description": "",
+        "images": [],
+        "technologies": [ "Java" ],
+        "url": "",
+        "year": 2017
+    },
+    {
+        "name": "Mini Pokemon game application",
+        "cover": "",
+        "description": "",
+        "images": [],
+        "technologies": [ "Python" ],
+        "url": "",
+        "year": 2016
     }
 ]
