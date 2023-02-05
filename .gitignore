@@ -31,8 +31,5 @@ yarn-error.log*
 
 # Local Netlify folder
 .netlify
-.vs/slnx.sqlite
-.vs/netlify-portfolio/FileContentIndex/read.lock
+.vs
 *.vsidx
-.vs/netlify-portfolio/v17/.suo
-.vs/VSWorkspaceState.json
