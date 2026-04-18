@@ -1,4 +1,6 @@
 .page {
+  --mx: 50%;
+  --my: 24%;
   --bg-1: #f3f8ff;
   --bg-2: #fff8ee;
   --ink: #0b1220;
@@ -14,12 +16,13 @@
   position: relative;
   overflow: hidden;
   background:
-    radial-gradient(circle at 12% 16%, rgba(147, 197, 253, 0.45), transparent 32%),
+    radial-gradient(circle at var(--mx) var(--my), rgba(147, 197, 253, 0.55), transparent 30%),
+    radial-gradient(circle at 12% 16%, rgba(147, 197, 253, 0.28), transparent 32%),
     radial-gradient(circle at 86% 12%, rgba(253, 224, 71, 0.28), transparent 25%),
     radial-gradient(circle at 78% 82%, rgba(20, 184, 166, 0.2), transparent 30%),
     linear-gradient(130deg, var(--bg-1), var(--bg-2));
   animation: backgroundShift 18s ease-in-out infinite alternate;
-  transition: background 0.35s ease, color 0.3s ease;
+  transition: background 0.2s ease, color 0.3s ease;
 }
 
 .page[data-theme='dark'] {
@@ -34,6 +37,7 @@
   --ring: rgba(96, 165, 250, 0.45);
   --shadow: rgba(2, 6, 23, 0.72);
   background:
+    radial-gradient(circle at var(--mx) var(--my), rgba(96, 165, 250, 0.33), transparent 30%),
     radial-gradient(circle at 10% 12%, rgba(37, 99, 235, 0.5), transparent 32%),
     radial-gradient(circle at 82% 14%, rgba(45, 212, 191, 0.24), transparent 22%),
     radial-gradient(circle at 80% 82%, rgba(96, 165, 250, 0.2), transparent 30%),

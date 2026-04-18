@@ -176,6 +176,16 @@ export default function Home() {
     [primaryLinks.email, primaryLinks.github, primaryLinks.linkedin]
   );
 
+  const handleBackgroundMove = (event) => {
+    const container = event.currentTarget;
+    const rect = container.getBoundingClientRect();
+    const x = ((event.clientX - rect.left) / rect.width) * 100;
+    const y = ((event.clientY - rect.top) / rect.height) * 100;
+
+    container.style.setProperty('--mx', `${Math.max(0, Math.min(100, x))}%`);
+    container.style.setProperty('--my', `${Math.max(0, Math.min(100, y))}%`);
+  };
+
   return (
     <>
       <Head>
@@ -216,7 +226,11 @@ export default function Home() {
         <span className={styles.themePinLabel}>{isDarkMode ? 'Switch to Light mode' : 'Switch to Dark mode'}</span>
       </button>
 
-      <div className={styles.page} data-theme={isDarkMode ? 'dark' : 'light'}>
+      <div
+        className={styles.page}
+        data-theme={isDarkMode ? 'dark' : 'light'}
+        onMouseMove={handleBackgroundMove}
+      >
         <main className={styles.main}>
           <section
             ref={registerReveal('hero')}
@@ -363,9 +377,9 @@ export default function Home() {
                     />
                     <div>
                       <p>
-                        <strong>{item.degree}</strong>
+                        <strong>{item.name}</strong>
                       </p>
-                      <p>{item.name}</p>
+                      <p>{item.degree}</p>
                       <p className={styles.subtle}>{formatDateRange(item.start, item.end)}</p>
                     </div>
                   </div>
