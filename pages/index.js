@@ -10,7 +10,8 @@ const affiliations = require('components/JSONFiles/Affiliations.json');
 const contacts = require('components/JSONFiles/ContactInfo.json');
 
 const OFFICIAL_EXCLUDE_IDS = new Set(['/#freelance', '/#ics-uplb']);
-const RESUME_DOWNLOAD_PATH = '/Janzen-Aguila-Resume.html';
+const RESUME_DOWNLOAD_PATH = '/docs/JCDAguila_Resume.pdf';
+const CV_DOWNLOAD_PATH = '/docs/JCDAguila_CV.pdf';
 
 function formatDate(dateObj) {
   if (!dateObj) return 'Present';
@@ -147,6 +148,9 @@ export default function Home() {
         </a>
         <a className={styles.secondaryAction} href={RESUME_DOWNLOAD_PATH} download>
           Download Resume
+        </a>
+        <a className={styles.secondaryAction} href={CV_DOWNLOAD_PATH} download>
+          Download CV
         </a>
       </div>
     ),

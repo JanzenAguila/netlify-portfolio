@@ -14,8 +14,8 @@
             "year": 2025
         },
         "end": {
-            "month": "April",
-            "day": 16,
+            "month": "May",
+            "day": 18,
             "year": 2026
         },
         "technologies": [ "Oracle NetSuite", "SuiteApp Development", "QA Engineering", "E2E Testing", "SuiteApprovals", "Supply Chain Management", "Warranty and Repairs Management", "Transaction Email Capture", "Groovy UI Automation", "Jest", "Jasmine", "Defect Triage", "Release Validation", "Kanban", "Confluence", "GitLab", "JIRA" ],
