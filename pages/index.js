@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Image from 'next/image';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { FaFacebookF, FaGithub, FaLinkedinIn, FaMailBulk, FaMoon, FaSkype, FaSun } from 'react-icons/fa';
 import styles from '@styles/Portfolio.module.css';
@@ -73,6 +74,24 @@ export default function Home() {
     email: contacts.find((item) => item.name === 'Email')?.url || 'mailto:janzenaguila@gmail.com',
     linkedin: contacts.find((item) => item.name === 'LinkedIn')?.url || 'https://www.linkedin.com/in/janzenaguila/',
     github: contacts.find((item) => item.name === 'GitHub')?.url || 'https://github.com/JanzenAguila',
+  };
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
+  const profileTitle = 'Janzen Aguila | Software Engineer';
+  const roleLine = 'Software Engineer | AI-Enabled Automation Consultant | SuiteScript & API Developer';
+  const seoDescription =
+    'Portfolio of Janzen Aguila, a Software Engineer and AI-Enabled Automation Consultant focused on SuiteScript, APIs, GenAI-enabled workflows, and enterprise-ready web solutions.';
+  const ogImagePath = '/janzen-aguila.png';
+  const canonicalUrl = siteUrl ? `${siteUrl.replace(/\/$/, '')}/` : null;
+  const ogImageUrl = siteUrl ? `${siteUrl.replace(/\/$/, '')}${ogImagePath}` : null;
+  const personSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: 'Janzen Christian Aguila',
+    jobTitle: 'Software Engineer',
+    description: seoDescription,
+    url: canonicalUrl || undefined,
+    sameAs: [primaryLinks.linkedin, primaryLinks.github].filter(Boolean),
+    knowsAbout: ['Software Engineering', 'Automation Consulting', 'SuiteScript', 'API Development', 'Generative AI'],
   };
 
   useEffect(() => {
@@ -160,10 +179,27 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Janzen Aguila | Software Engineer</title>
-        <meta
-          name="description"
-          content="Janzen Aguila portfolio: Software Engineer with cross-industry experience in automation, full-stack web apps, and enterprise delivery."
+        <title>{profileTitle}</title>
+        <meta name="description" content={seoDescription} />
+        <meta name="robots" content="index,follow,max-image-preview:large" />
+        <meta name="author" content="Janzen Christian Aguila" />
+        <meta name="keywords" content="Software Engineer, Automation Consultant, SuiteScript, API Developer, GenAI, Portfolio" />
+        {canonicalUrl ? <link rel="canonical" href={canonicalUrl} /> : null}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={profileTitle} />
+        <meta property="og:description" content={seoDescription} />
+        {canonicalUrl ? <meta property="og:url" content={canonicalUrl} /> : null}
+        {ogImageUrl ? <meta property="og:image" content={ogImageUrl} /> : null}
+        <meta property="og:site_name" content="Janzen Aguila Portfolio" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={profileTitle} />
+        <meta name="twitter:description" content={seoDescription} />
+        {ogImageUrl ? <meta name="twitter:image" content={ogImageUrl} /> : null}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(personSchema),
+          }}
         />
       </Head>
 
@@ -188,7 +224,7 @@ export default function Home() {
             className={`${styles.hero} ${revealClass('hero')}`}
           >
             <div className={styles.heroIntro}>
-              <p className={styles.kicker}>Software Engineer | Automation Consultant | Builder</p>
+              <p className={styles.kicker}>{roleLine}</p>
               <h1>Janzen Christian Aguila</h1>
               <p className={styles.heroCopy}>
                 I design and build practical software solutions that help teams move faster, reduce repetitive work,
@@ -198,7 +234,15 @@ export default function Home() {
               {heroActions}
             </div>
             <div className={styles.heroImageWrap}>
-              <img className={styles.heroImage} src="/profile.jpg" alt="Janzen Aguila portrait" />
+              <Image
+                className={styles.heroImage}
+                src="/profile.jpg"
+                alt="Janzen Aguila portrait"
+                width={700}
+                height={700}
+                priority
+                sizes="(max-width: 640px) 270px, (max-width: 960px) 320px, 350px"
+              />
             </div>
           </section>
 
@@ -253,7 +297,15 @@ export default function Home() {
                       </p>
                       <p className={styles.subtle}>{formatDateRange(item.start, item.end)}</p>
                     </div>
-                    <img src={`/${item.logo || 'janzen-aguila.png'}`} alt={`${item.name} logo`} className={styles.companyLogo} />
+                    <Image
+                      src={`/${item.logo || 'janzen-aguila.png'}`}
+                      alt={`${item.name} logo`}
+                      className={styles.companyLogo}
+                      width={62}
+                      height={62}
+                      sizes="62px"
+                      loading="lazy"
+                    />
                   </div>
                   <ul>
                     {(item.description || []).map((line) => (
@@ -300,7 +352,15 @@ export default function Home() {
               {education.map((item, idx) => (
                 <div key={item.id} className={styles.listItem} style={{ '--delay': `${(idx + 1) * 60}ms` }}>
                   <div className={styles.listWithLogo}>
-                    <img src={`/${item.logo}`} alt={`${item.name} logo`} className={styles.listLogo} />
+                    <Image
+                      src={`/${item.logo}`}
+                      alt={`${item.name} logo`}
+                      className={styles.listLogo}
+                      width={56}
+                      height={56}
+                      sizes="56px"
+                      loading="lazy"
+                    />
                     <div>
                       <p>
                         <strong>{item.degree}</strong>
@@ -318,7 +378,15 @@ export default function Home() {
               {affiliations.map((group, idx) => (
                 <div key={group.id} className={styles.listItem} style={{ '--delay': `${(idx + 1) * 70}ms` }}>
                   <div className={styles.listWithLogo}>
-                    <img src={`/${group.logo}`} alt={`${group.name} logo`} className={styles.listLogo} />
+                    <Image
+                      src={`/${group.logo}`}
+                      alt={`${group.name} logo`}
+                      className={styles.listLogo}
+                      width={56}
+                      height={56}
+                      sizes="56px"
+                      loading="lazy"
+                    />
                     <div>
                       <p>
                         <strong>{group.acronym || group.name}</strong>
