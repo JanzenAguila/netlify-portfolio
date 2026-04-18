@@ -1,9 +1,32 @@
 [
     {
+        "id": "/#netsuite",
+        "name": "Oracle NetSuite",
+        "description": [
+            "Worked as a software engineer for Oracle NetSuite.",
+            "Developed and tested various SuiteApps, along with providing support for customer issues that were encountered."
+        ],
+        "logo": "netsuite-logo-dark-vert.png",
+        "role": "Software Engineer (One Engineer Model)",
+        "start": {
+            "month": "July",
+            "day": 7,
+            "year": 2025
+        },
+        "end": {
+            "month": "April",
+            "day": 16,
+            "year": 2026
+        },
+        "technologies": [ "Oracle NetSuite", "SuiteApp Development", "QA Engineering", "E2E Testing", "SuiteApprovals", "Supply Chain Management", "Warranty and Repairs Management", "Transaction Email Capture", "Groovy UI Automation", "Jest", "Jasmine", "Defect Triage", "Release Validation", "Kanban", "Confluence", "GitLab", "JIRA" ],
+        "url": "https://www.netsuite.com/"
+    },
+    {
         "id": "/#ey-gds",
         "name": "EY GDS Philippines",
         "description": [
-            "Worked as an intelligent automation consultant for EY GDS Philippines."
+            "Worked as an intelligent automation consultant for EY GDS Philippines.",
+            "Developed automations using UiPath, Microsoft Power Automate, and other various technologies, along with development of AI-powered solutions using different APIs and tools."
         ],
         "logo": "ey-logo.png",
         "role": "Intelligent Automation Consultant",
@@ -12,8 +35,12 @@
             "day": 6,
             "year": 2023
         },
-        "end": null,
-        "technologies": [ "N/A" ],
+        "end": {
+            "month": "June",
+            "day": 13,
+            "year": 2025
+        },
+        "technologies": [ "UiPath", "BluePrism", "Microsoft Power Automate", "Microsoft Power BI", "OpenAI GPT", "Microsoft Teams", "Microsoft Sharepoint", "Dataverse", "Kore.AI", "SAP SuccessFactors", "Azure Data Factory", "Azure DevOps", "GitHub", "JIRA" ],
         "url": "https://www.ey.com/en_ph/"
     },
     {
@@ -35,7 +62,7 @@
             "day": 20,
             "year": 2023
         },
-        "technologies": [ "Python", "XML", "VanillaJS", "PHP", "NodeJS", "ReactJS", "MySQL", "AWS SES", "AWS", "Paymongo API" ],
+        "technologies": [ "Python", "XML", "VanillaJS", "PHP", "NodeJS", "ReactJS", "MySQL", "AWS SES", "AWS", "Paymongo API", "Confluence", "BitBucket", "JIRA" ],
         "url": "https://www.gmanmi.com/"
     },
     {
