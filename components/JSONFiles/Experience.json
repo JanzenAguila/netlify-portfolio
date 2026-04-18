@@ -71,14 +71,18 @@
         "description": [
             "Worked as a part-time freelance software developer."
         ],
-        "logo": "",
+        "logo": "janzen-aguila.png",
         "role": "Freelancer",
         "start": {
             "month": "September",
             "day": 13,
             "year": 2022
         },
-        "end": null,
+        "end": {
+            "month": "December",
+            "day": 13,
+            "year": 2022
+        },
         "technologies": [ "C#", "XML" ],
         "url": ""
     },
