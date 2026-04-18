@@ -372,7 +372,11 @@ export default function Home() {
             <h2>Selected Projects</h2>
             <div className={styles.cardGrid}>
               {featuredProjects.map((project, idx) => (
-                <article key={project.name} className={styles.card} style={{ '--delay': `${idx * 90}ms` }}>
+                <article
+                  key={project.name}
+                  className={`${styles.card} ${styles.expandableItem} ${expanded.projects[project.name] ? styles.isExpanded : styles.isCollapsed}`}
+                  style={{ '--delay': `${idx * 90}ms` }}
+                >
                   <h3>{project.name}</h3>
                   {project.description ? <p className={styles.subtle}>{project.description}</p> : null}
                   <button
@@ -406,7 +410,11 @@ export default function Home() {
             <article className={styles.panel} style={{ '--delay': '20ms' }}>
               <h2>Education</h2>
               {education.map((item, idx) => (
-                <div key={item.id} className={styles.listItem} style={{ '--delay': `${(idx + 1) * 60}ms` }}>
+                <div
+                  key={item.id}
+                  className={`${styles.listItem} ${styles.expandableItem} ${expanded.education[item.id] ? styles.isExpanded : styles.isCollapsed}`}
+                  style={{ '--delay': `${(idx + 1) * 60}ms` }}
+                >
                   <div className={styles.listWithLogo}>
                     <Image
                       src={`/${item.logo}`}
@@ -442,7 +450,11 @@ export default function Home() {
             <article className={styles.panel} style={{ '--delay': '110ms' }}>
               <h2>Leadership & Affiliations</h2>
               {affiliations.map((group, idx) => (
-                <div key={group.id} className={styles.listItem} style={{ '--delay': `${(idx + 1) * 70}ms` }}>
+                <div
+                  key={group.id}
+                  className={`${styles.listItem} ${styles.expandableItem} ${expanded.affiliations[group.id] ? styles.isExpanded : styles.isCollapsed}`}
+                  style={{ '--delay': `${(idx + 1) * 70}ms` }}
+                >
                   <div className={styles.listWithLogo}>
                     <Image
                       src={`/${group.logo}`}

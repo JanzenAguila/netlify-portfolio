@@ -442,6 +442,10 @@
   font-size: 0.8rem;
   font-weight: 700;
   cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 30px;
   transition: transform 0.18s ease, border-color 0.18s ease, color 0.18s ease;
 }
 
@@ -516,9 +520,20 @@
 }
 
 .listItem {
-  margin-top: 0.8rem;
-  padding-top: 0.8rem;
-  border-top: 1px solid rgba(148, 163, 184, 0.2);
+  margin-top: 0.85rem;
+  padding-top: 0.9rem;
+  border-top: none;
+  position: relative;
+}
+
+.listItem::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  border-top: 1px solid rgba(148, 163, 184, 0.26);
+  pointer-events: none;
 }
 
 .listWithLogo {
@@ -540,6 +555,18 @@
 
 .listItem p {
   margin: 0.2rem 0 0;
+}
+
+.expandableItem {
+  transition: min-height 0.2s ease;
+}
+
+.expandableItem.isCollapsed {
+  min-height: 112px;
+}
+
+.expandableItem.isExpanded {
+  min-height: 112px;
 }
 
 .contactSection {
