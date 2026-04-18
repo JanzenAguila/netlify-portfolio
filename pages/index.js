@@ -63,12 +63,30 @@ function isShowcaseProject(project) {
 export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [visibleSections, setVisibleSections] = useState({});
+  const [expanded, setExpanded] = useState({
+    experience: {},
+    projects: {},
+    education: {},
+    affiliations: {},
+  });
   const sectionRefs = useRef({});
 
   const yearsOfExperience = getExperienceYears();
   const coreRolesCount = experiences.filter((item) => !OFFICIAL_EXCLUDE_IDS.has(item.id)).length;
   const topSkills = getTopSkills();
   const featuredProjects = projects.filter(isShowcaseProject).slice(0, 6);
+  const timelineExperiences = useMemo(
+    () =>
+      [...experiences].sort((a, b) => {
+        const yearDiff = (b.start?.year || 0) - (a.start?.year || 0);
+        if (yearDiff !== 0) return yearDiff;
+
+        const monthA = new Date(`${a.start?.month || 'January'} 1, 2000`).getMonth();
+        const monthB = new Date(`${b.start?.month || 'January'} 1, 2000`).getMonth();
+        return monthB - monthA;
+      }),
+    []
+  );
 
   const primaryLinks = {
     email: contacts.find((item) => item.name === 'Email')?.url || 'mailto:janzenaguila@gmail.com',
@@ -186,6 +204,16 @@ export default function Home() {
     container.style.setProperty('--my', `${Math.max(0, Math.min(100, y))}%`);
   };
 
+  const toggleExpanded = (group, key) => {
+    setExpanded((prev) => ({
+      ...prev,
+      [group]: {
+        ...prev[group],
+        [key]: !prev[group][key],
+      },
+    }));
+  };
+
   return (
     <>
       <Head>
@@ -300,9 +328,11 @@ export default function Home() {
             className={`${styles.section} ${revealClass('experience')}`}
           >
             <h2>Recent Experience</h2>
-            <div className={styles.cardGrid}>
-              {experiences.map((item, idx) => (
-                <article key={item.id} className={styles.card} style={{ '--delay': `${idx * 90}ms` }}>
+            <div className={styles.timeline}>
+              {timelineExperiences.map((item, idx) => (
+                <article key={item.id} className={`${styles.card} ${styles.timelineCard}`} style={{ '--delay': `${idx * 90}ms` }}>
+                  <span className={styles.timelineYear}>{item.start?.year}</span>
+                  <span className={styles.timelineDot} />
                   <div className={styles.cardHeader}>
                     <div>
                       <h3>{item.role}</h3>
@@ -345,12 +375,24 @@ export default function Home() {
                 <article key={project.name} className={styles.card} style={{ '--delay': `${idx * 90}ms` }}>
                   <h3>{project.name}</h3>
                   {project.description ? <p className={styles.subtle}>{project.description}</p> : null}
-                  <ul>
-                    {(project.description_detailed || []).slice(0, 2).map((line) => (
-                      <li key={line}>{line}</li>
-                    ))}
-                  </ul>
-                  <p className={styles.tags}>{(project.technologies || []).slice(0, 6).join(' | ')}</p>
+                  <button
+                    type="button"
+                    className={styles.expandButton}
+                    onClick={() => toggleExpanded('projects', project.name)}
+                    aria-expanded={!!expanded.projects[project.name]}
+                  >
+                    {expanded.projects[project.name] ? 'Hide details' : 'View details'}
+                  </button>
+                  {expanded.projects[project.name] ? (
+                    <>
+                      <ul>
+                        {(project.description_detailed || []).slice(0, 2).map((line) => (
+                          <li key={line}>{line}</li>
+                        ))}
+                      </ul>
+                      <p className={styles.tags}>{(project.technologies || []).slice(0, 6).join(' | ')}</p>
+                    </>
+                  ) : null}
                 </article>
               ))}
             </div>
@@ -380,7 +422,17 @@ export default function Home() {
                         <strong>{item.name}</strong>
                       </p>
                       <p>{item.degree}</p>
-                      <p className={styles.subtle}>{formatDateRange(item.start, item.end)}</p>
+                      <button
+                        type="button"
+                        className={styles.expandButtonInline}
+                        onClick={() => toggleExpanded('education', item.id)}
+                        aria-expanded={!!expanded.education[item.id]}
+                      >
+                        {expanded.education[item.id] ? 'Hide details' : 'View details'}
+                      </button>
+                      {expanded.education[item.id] ? (
+                        <p className={styles.subtle}>{formatDateRange(item.start, item.end)}</p>
+                      ) : null}
                     </div>
                   </div>
                 </div>
@@ -405,11 +457,21 @@ export default function Home() {
                       <p>
                         <strong>{group.acronym || group.name}</strong>
                       </p>
-                      {(group.positions || []).map((role) => (
-                        <p key={`${group.id}-${role.position}`} className={styles.subtle}>
-                          {role.position} ({formatDateRange(role.duration?.start, role.duration?.end)})
-                        </p>
-                      ))}
+                      <button
+                        type="button"
+                        className={styles.expandButtonInline}
+                        onClick={() => toggleExpanded('affiliations', group.id)}
+                        aria-expanded={!!expanded.affiliations[group.id]}
+                      >
+                        {expanded.affiliations[group.id] ? 'Hide details' : 'View details'}
+                      </button>
+                      {expanded.affiliations[group.id]
+                        ? (group.positions || []).map((role) => (
+                            <p key={`${group.id}-${role.position}`} className={styles.subtle}>
+                              {role.position} ({formatDateRange(role.duration?.start, role.duration?.end)})
+                            </p>
+                          ))
+                        : null}
                     </div>
                   </div>
                 </div>
@@ -439,7 +501,8 @@ export default function Home() {
                   className={styles.iconButton}
                   style={{ '--delay': `${idx * 60}ms` }}
                 >
-                  {iconPicker(item.icon)}
+                  <span className={styles.iconGlyph}>{iconPicker(item.icon)}</span>
+                  <span className={styles.iconLabel}>{item.name}</span>
                 </a>
               ))}
             </div>
