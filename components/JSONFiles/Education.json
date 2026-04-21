@@ -1,36 +1,11 @@
 [
-    {
-        "id": "/#up-los-banos",
-        "name": "University of the Philippines Los Baños",
-        "logo": "uplb-logo.png",
-        "degree": "BS Computer Science",
-        "start": {
-            "month": "May",
-            "day": null,
-            "year": 2015
-        },
-        "end": {
-            "month": "February",
-            "day": null,
-            "year": 2021
-        },
-        "url": "https://uplb.edu.ph/main/"
-    },
-    {
-        "id": "/#mater-dei-academy-hs",
-        "name": "Mater Dei Academy",
-        "logo": "mda-logo.png",
-        "degree": "High School",
-        "start": {
-            "month": "June",
-            "day": null,
-            "year": 2011
-        },
-        "end": {
-            "month": "March",
-            "day": null,
-            "year": 2015
-        },
-        "url": "https://materdeiacademy.ph/"
-    }
+  {
+    "id": "/#sample-university",
+    "name": "Sample University",
+    "logo": "brand-placeholder.svg",
+    "degree": "BS Computer Science",
+    "start": { "month": "June", "day": null, "year": 2018 },
+    "end": { "month": "May", "day": null, "year": 2022 },
+    "url": "https://example.edu"
+  }
 ]

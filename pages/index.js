@@ -10,9 +10,9 @@ const education = require('components/JSONFiles/Education.json');
 const affiliations = require('components/JSONFiles/Affiliations.json');
 const contacts = require('components/JSONFiles/ContactInfo.json');
 
-const OFFICIAL_EXCLUDE_IDS = new Set(['/#freelance', '/#ics-uplb']);
-const RESUME_DOWNLOAD_PATH = '/docs/JCDAguila_Resume.pdf';
-const CV_DOWNLOAD_PATH = '/docs/JCDAguila_CV.pdf';
+const OFFICIAL_EXCLUDE_IDS = new Set([]);
+const RESUME_DOWNLOAD_PATH = '/docs/sample-resume.pdf';
+const CV_DOWNLOAD_PATH = '/docs/sample-cv.pdf';
 
 function formatDate(dateObj) {
   if (!dateObj) return 'Present';
@@ -89,23 +89,22 @@ export default function Home() {
   );
 
   const primaryLinks = {
-    email: contacts.find((item) => item.name === 'Email')?.url || 'mailto:janzenaguila@gmail.com',
-    linkedin: contacts.find((item) => item.name === 'LinkedIn')?.url || 'https://www.linkedin.com/in/janzenaguila/',
-    github: contacts.find((item) => item.name === 'GitHub')?.url || 'https://github.com/JanzenAguila',
+    email: contacts.find((item) => item.name === 'Email')?.url || 'mailto:yourname@example.com',
+    linkedin: contacts.find((item) => item.name === 'LinkedIn')?.url || 'https://www.linkedin.com/in/your-profile/',
+    github: contacts.find((item) => item.name === 'GitHub')?.url || 'https://github.com/your-username',
   };
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
-  const profileTitle = 'Janzen Aguila | Software Engineer';
-  const roleLine = 'Software Engineer | AI-Enabled Automation Consultant | SuiteScript & API Developer';
-  const seoDescription =
-    'Portfolio of Janzen Aguila, a Software Engineer and AI-Enabled Automation Consultant focused on SuiteScript, APIs, GenAI-enabled workflows, and enterprise-ready web solutions.';
-  const ogImagePath = '/janzen-aguila.png';
+  const profileTitle = 'Your Name | Portfolio Template';
+  const roleLine = 'Your Role | Specialty One | Specialty Two';
+  const seoDescription = 'Portfolio template for developers and engineers. Replace this text with your own summary.';
+  const ogImagePath = '/profile-placeholder.svg';
   const canonicalUrl = siteUrl ? `${siteUrl.replace(/\/$/, '')}/` : null;
   const ogImageUrl = siteUrl ? `${siteUrl.replace(/\/$/, '')}${ogImagePath}` : null;
   const personSchema = {
     '@context': 'https://schema.org',
     '@type': 'Person',
-    name: 'Janzen Christian Aguila',
-    jobTitle: 'Software Engineer',
+    name: 'Your Name',
+    jobTitle: 'Your Role',
     description: seoDescription,
     url: canonicalUrl || undefined,
     sameAs: [primaryLinks.linkedin, primaryLinks.github].filter(Boolean),
@@ -220,7 +219,7 @@ export default function Home() {
         <title>{profileTitle}</title>
         <meta name="description" content={seoDescription} />
         <meta name="robots" content="index,follow,max-image-preview:large" />
-        <meta name="author" content="Janzen Christian Aguila" />
+        <meta name="author" content="Your Name" />
         <meta name="keywords" content="Software Engineer, Automation Consultant, SuiteScript, API Developer, GenAI, Portfolio" />
         {canonicalUrl ? <link rel="canonical" href={canonicalUrl} /> : null}
         <meta property="og:type" content="website" />
@@ -228,7 +227,7 @@ export default function Home() {
         <meta property="og:description" content={seoDescription} />
         {canonicalUrl ? <meta property="og:url" content={canonicalUrl} /> : null}
         {ogImageUrl ? <meta property="og:image" content={ogImageUrl} /> : null}
-        <meta property="og:site_name" content="Janzen Aguila Portfolio" />
+        <meta property="og:site_name" content="Portfolio Template" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={profileTitle} />
         <meta name="twitter:description" content={seoDescription} />
@@ -267,19 +266,17 @@ export default function Home() {
           >
             <div className={styles.heroIntro}>
               <p className={styles.kicker}>{roleLine}</p>
-              <h1>Janzen Christian Aguila</h1>
+              <h1>Your Name</h1>
               <p className={styles.heroCopy}>
-                I design and build practical software solutions that help teams move faster, reduce repetitive work,
-                and ship reliably. I blend engineering, automation, and business context to deliver useful products
-                from idea to production.
+                Replace this intro with your personal summary, value proposition, and the type of work you want to be hired for.
               </p>
               {heroActions}
             </div>
             <div className={styles.heroImageWrap}>
               <Image
                 className={styles.heroImage}
-                src="/profile.jpg"
-                alt="Janzen Aguila portrait"
+                src="/profile-placeholder.svg"
+                alt="Profile placeholder"
                 width={700}
                 height={700}
                 priority
@@ -342,7 +339,7 @@ export default function Home() {
                       <p className={styles.subtle}>{formatDateRange(item.start, item.end)}</p>
                     </div>
                     <Image
-                      src={`/${item.logo || 'janzen-aguila.png'}`}
+                      src={`/${item.logo || 'brand-placeholder.svg'}`}
                       alt={`${item.name} logo`}
                       className={styles.companyLogo}
                       width={62}
@@ -524,3 +521,4 @@ export default function Home() {
     </>
   );
 }
+

@@ -1,67 +1,19 @@
 [
-    {
-        "name": "University of the Philippines Sentai Ongaku Manga Anime Soshiki",
-        "acronym": "UP SOMA Soshiki",
-        "description": "",
-        "id": "/#up-soma-soshiki",
-        "logo": "SOMA-logo.png",
-        "positions": [
-            {
-                "position": "Publicity Committee Head",
-                "duration": {
-                    "start": {
-                        "month": "August",
-                        "day": null,
-                        "year": 2018
-                    },
-                    "end": {
-                        "month": "August",
-                        "day": null,
-                        "year": 2020
-                    }
-                }
-            },
-            {
-                "position": "Resident Member",
-                "duration": {
-                    "start": {
-                        "month": "March",
-                        "day": null,
-                        "year": 2018
-                    },
-                    "end": {
-                        "month": "August",
-                        "day": null,
-                        "year": 2021
-                    }
-                }
-            }
-        ],
-        "url": "https://web.facebook.com/upsomasoshiki/"
-    },
-    {
-        "name": "Alliance of Computer Science Students UPLB",
-        "acronym": "ACSS UPLB",
-        "description": "",
-        "id": "/#acss-uplb",
-        "logo": "ACSS-logo.png",
-        "positions": [
-            {
-                "position": "Developer",
-                "duration": {
-                    "start": {
-                        "month": "March",
-                        "day": null,
-                        "year": 2018
-                    },
-                    "end": {
-                        "month": "August",
-                        "day": null,
-                        "year": 2021
-                    }
-                }
-            }
-        ],
-        "url": "https://web.facebook.com/ACSSPH/"
-    }
+  {
+    "name": "Sample Professional Group",
+    "acronym": "SPG",
+    "description": "",
+    "id": "/#sample-group",
+    "logo": "brand-placeholder.svg",
+    "positions": [
+      {
+        "position": "Team Lead",
+        "duration": {
+          "start": { "month": "January", "day": null, "year": 2021 },
+          "end": { "month": "December", "day": null, "year": 2022 }
+        }
+      }
+    ],
+    "url": "https://example.com"
+  }
 ]

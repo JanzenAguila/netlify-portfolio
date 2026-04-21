@@ -1,111 +1,51 @@
 [
     {
-        "id": "/#netsuite",
-        "name": "Oracle NetSuite",
-        "description": [
-            "Worked as a software engineer for Oracle NetSuite.",
-            "Developed and tested various SuiteApps, along with providing support for customer issues that were encountered."
-        ],
-        "logo": "netsuite-logo-dark-vert.png",
-        "role": "Software Engineer (One Engineer Model)",
-        "start": {
-            "month": "July",
-            "day": 7,
-            "year": 2025
-        },
-        "end": {
-            "month": "May",
-            "day": 18,
-            "year": 2026
-        },
-        "technologies": [ "Oracle NetSuite", "SuiteApp Development", "QA Engineering", "E2E Testing", "SuiteApprovals", "Supply Chain Management", "Warranty and Repairs Management", "Transaction Email Capture", "Groovy UI Automation", "Jest", "Jasmine", "Defect Triage", "Release Validation", "Kanban", "Confluence", "GitLab", "JIRA" ],
-        "url": "https://www.netsuite.com/"
+        "id":  "/#sample-company",
+        "name":  "Sample Company",
+        "description":  [
+                            "Worked as a software engineer building internal and client-facing applications.",
+                            "Collaborated across product, QA, and operations to deliver stable releases."
+                        ],
+        "logo":  "brand-placeholder.svg",
+        "role":  "Software Engineer",
+        "start":  {
+                      "month":  "January",
+                      "day":  10,
+                      "year":  2023
+                  },
+        "end":  null,
+        "technologies":  [
+                             "JavaScript",
+                             "React",
+                             "Node.js",
+                             "SQL",
+                             "Git"
+                         ],
+        "url":  "https://example.com"
     },
     {
-        "id": "/#ey-gds",
-        "name": "EY GDS Philippines",
-        "description": [
-            "Worked as an intelligent automation consultant for EY GDS Philippines.",
-            "Developed automations using UiPath, Microsoft Power Automate, and other various technologies, along with development of AI-powered solutions using different APIs and tools."
-        ],
-        "logo": "ey-logo.png",
-        "role": "AI-Enabled Automation Engineer",
-        "start": {
-            "month": "February",
-            "day": 6,
-            "year": 2023
-        },
-        "end": {
-            "month": "June",
-            "day": 13,
-            "year": 2025
-        },
-        "technologies": [ "UiPath", "BluePrism", "Microsoft Power Automate", "Microsoft Power BI", "OpenAI GPT", "Microsoft Teams", "Microsoft Sharepoint", "Dataverse", "Kore.AI", "SAP SuccessFactors", "Azure Data Factory", "Azure DevOps", "GitHub", "JIRA" ],
-        "url": "https://www.ey.com/en_ph/"
-    },
-    {
-        "id": "/#gma-nmi",
-        "name": "GMA New Media Inc.",
-        "description": [
-            "Worked as an associate developer for GMA NMI, a subsidiary of GMA Network.",
-            "Developed several modules for the backend of multiple projects, as well as worked on optimizing the UI for the same projects."
-        ],
-        "logo": "nmi-logo.png",
-        "role": "Associate Developer",
-        "start": {
-            "month": "November",
-            "day": 4,
-            "year": 2021
-        },
-        "end": {
-            "month": "January",
-            "day": 20,
-            "year": 2023
-        },
-        "technologies": [ "Python", "XML", "VanillaJS", "PHP", "NodeJS", "ReactJS", "MySQL", "AWS SES", "AWS", "Paymongo API", "Confluence", "BitBucket", "JIRA" ],
-        "url": "https://www.gmanmi.com/"
-    },
-    {
-        "id": "/#freelance",
-        "name": "Freelance",
-        "description": [
-            "Worked as a part-time freelance software developer."
-        ],
-        "logo": "janzen-aguila.png",
-        "role": "Freelancer",
-        "start": {
-            "month": "September",
-            "day": 13,
-            "year": 2022
-        },
-        "end": {
-            "month": "December",
-            "day": 13,
-            "year": 2022
-        },
-        "technologies": [ "C#", "XML" ],
-        "url": ""
-    },
-    {
-        "id": "/#ics-uplb",
-        "name": "Institute of Computer Science, UPLB",
-        "description": [
-            "Worked as a software developer intern for ICS UPLB and helped in developing a database system for Makiling Biodiversity from an existing PHP application.",
-            "Had a paper published on <a href=\"https://www.academia.edu/\">Academia</a> entitled <b>\"Updating of Makiling Biodiversity Information System (MakiBIS) and Analysis of Biodiversity Data</b>\"."
-        ],
-        "logo": "ics-logo.png",
-        "role": "Software Developer Intern",
-        "start": {
-            "month": "June",
-            "day": 10,
-            "year": 2019
-        },
-        "end": {
-            "month": "July",
-            "day": 11,
-            "year": 2019
-        },
-        "technologies": [ "VanillaJS", "PHP", "NodeJS", "ReactJS", "MySQL" ],
-        "url": "http://ics.uplb.edu.ph/"
+        "id":  "/#sample-internship",
+        "name":  "Example Startup",
+        "description":  [
+                            "Completed a software development internship focused on feature delivery and testing."
+                        ],
+        "logo":  "brand-placeholder.svg",
+        "role":  "Software Developer Intern",
+        "start":  {
+                      "month":  "June",
+                      "day":  1,
+                      "year":  2022
+                  },
+        "end":  {
+                    "month":  "August",
+                    "day":  31,
+                    "year":  2022
+                },
+        "technologies":  [
+                             "Python",
+                             "Django",
+                             "PostgreSQL"
+                         ],
+        "url":  "https://example.com"
     }
 ]

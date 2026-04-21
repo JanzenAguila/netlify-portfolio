@@ -1,20 +1,20 @@
 [
-    {
-        "name": "Email",
-        "url": "mailto:janzenaguila@gmail.com",
-        "description": "Send me an email",
-        "icon": "FaMailBulk"
-    },
-    {
-        "name": "GitHub",
-        "url": "https://github.com/JanzenAguila",
-        "description": "Check out my GitHub",
-        "icon": "FaGithub"
-    },
-    {
-        "name": "LinkedIn",
-        "url": "https://www.linkedin.com/in/janzenaguila/",
-        "description": "View my LinkedIn profile",
-        "icon": "FaLinkedinIn"
-    }
+  {
+    "name": "Communication",
+    "url": "",
+    "description": "Clearly explains technical work to non-technical stakeholders",
+    "icon": ""
+  },
+  {
+    "name": "Collaboration",
+    "url": "",
+    "description": "Works effectively with cross-functional teams",
+    "icon": ""
+  },
+  {
+    "name": "Problem Solving",
+    "url": "",
+    "description": "Breaks down complex issues into practical solutions",
+    "icon": ""
+  }
 ]

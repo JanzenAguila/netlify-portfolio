@@ -3,15 +3,15 @@ describe('sample test', () => {
     cy.visit('/')
   })
 
-  it('displays the resources text', () => {
-    cy.get('h1')
-    .contains('Janzen');
+  it('displays the main heading', () => {
+    cy.get('h1').contains('Your Name');
   })
-  it('renders the Netlify logo image', () => {
+
+  it('renders at least one image', () => {
     cy.get('img')
-    .should('be.visible')
-    .and(($img) => {
-      expect($img[0].naturalWidth).to.be.greaterThan(0);
-    })
+      .should('be.visible')
+      .and(($img) => {
+        expect($img[0].naturalWidth).to.be.greaterThan(0);
+      })
   })
 })

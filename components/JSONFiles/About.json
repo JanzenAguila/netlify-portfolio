@@ -1,22 +1,22 @@
 [
-    {
-        "name": "about-general",
-        "content": "Hello, my name is Janzen Christian Aguila. I am a developer with around {year} years of experience in creating and building applications (mostly web), and I enjoy learning a lot of different stuff, whether they may be related to my work or just anything under the sun!"
-    },
-    {
-        "name": "about-experience",
-        "content": "I am currently working as an Associate Developer for GMA New Media Inc. where I spend my time developing useful applications for the company and its clients. I've also had the privilege of working for my alma mater as well, and I wouldn't be where I am now if it weren't for them."
-    },
-    {
-        "name": "about-education",
-        "content": "I have graduated from University of the Philippines Los Baños with a BS Computer Science degree, while experiencing a pandemic no less! I have learned a lot from my stay there, and while it took me quite some time to finish my studies maybe that's just because I like to be on the learning side of things. Don't get me wrong though, while I really like learning a lot of stuff I also experienced being a leader who directs their members well and imparts what I have learned to everyone too, which was evident when I became one of the heads of our organization's executive committee. Speaking of organizations, I was part of 2 university organizations where I also made a lot of acquaintances and I can say that I am very grateful for them as they were a huge influence on what made me who I am today."
-    },
-    {
-        "name": "about-hobbies",
-        "content": "Whenever I am not working on something, I prefer to enjoy myself by playing some games on my computer or phone. I also like to play my musical instruments every now and then (or maybe just because there's that one song stuck in my head and I like to know how to play it). Sometimes I just watch movies, anime, (maybe a long series if I feel like doing so) or any videos I find on the internet. And of course, there are always times where I just enjoy interacting with my friends and talk about a lot of interesting stuff!"
-    },
-    {
-        "name": "about-goals",
-        "content": "My goals? I guess you can say that I just want to explore around a lot, try a lot of different things, and live life. Of course, to do that I'll need a lot of spending power so that's where my goal of earning a lot, actively and passively, also comes in. I guess my long term goal would be to create works that will give impactful experiences for a wide reach of people, to create a setup where I will be able to live life fully and comfortably, and if possible, achieve early retirement."
-    }
+  {
+    "name": "about-general",
+    "content": "Hello, my name is Your Name. I am a software developer with around {year} years of experience building practical web and automation solutions."
+  },
+  {
+    "name": "about-experience",
+    "content": "I currently work as a Sample Role at Sample Company, where I help deliver features from concept to production."
+  },
+  {
+    "name": "about-education",
+    "content": "I completed my degree in Computer Science and continuously build my skills through projects and collaboration."
+  },
+  {
+    "name": "about-hobbies",
+    "content": "Outside work, I enjoy learning new tools, gaming, media, and spending time with friends and family."
+  },
+  {
+    "name": "about-goals",
+    "content": "My long-term goal is to build software that creates meaningful impact while maintaining a balanced and sustainable life."
+  }
 ]
