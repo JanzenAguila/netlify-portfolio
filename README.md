@@ -2,6 +2,10 @@
 
 This folder is a template-ready copy of the portfolio project with personal details removed.
 
+## Sample Screenshot
+
+![Sample screenshot](./public/Sample%20screenshot.png)
+
 ## Quick Start
 
 ```bash
