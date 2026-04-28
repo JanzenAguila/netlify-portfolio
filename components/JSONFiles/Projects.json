@@ -1,5 +1,101 @@
 [
     {
+        "name": "SuiteApprovals (SAS)",
+        "cover": "",
+        "description": "Oracle NetSuite - SuiteApp",
+        "description_detailed": [
+            "Implemented and maintained SuiteApprovals features (including bulk approval enhancements) and shipped defect fixes across approval workflows.",
+            "Triaged customer and support-reported issues, reproduced defects in sandbox environments, and coordinated fixes through regular release cycles.",
+            "Validated releases using E2E/CVT scenarios, Jest unit tests, and Groovy-based UI automation to reduce regression risk."
+        ],
+        "images": [],
+        "teammates": [ "Rebecca Villestas", "Rex Raymond Flores", "Nathaniel Santiago", "Sean Co", "Garmond Bacolod", "Erwin Cabrera", "Anton Louis Morana", "Ryan Go" ],
+        "technologies": [ "Oracle NetSuite", "SuiteApprovals", "SuiteScript 2.x", "NetSuite UIF", "Jest", "Groovy UI Automation", "E2E/CVT Testing", "JIRA", "GitLab" ],
+        "url": "",
+        "date": {
+            "start": {
+                "year": 2025,
+                "month": 10
+            },
+            "end": {
+                "year": 2026,
+                "month": 4
+            }
+        }
+    },
+    {
+        "name": "Supply Chain Management (SCM)",
+        "cover": "",
+        "description": "Oracle NetSuite - SuiteApp (Template)",
+        "description_detailed": [
+            "Implemented and maintained enhancements across SCM flows such as purchasing, item receipt, transfer handling, and inventory availability controls.",
+            "Triaged customer and support-reported SCM issues, reproduced edge cases in sandbox accounts, and coordinated fixes through scheduled release trains.",
+            "Validated SCM releases with E2E/CVT scenarios, Jest unit tests, and Groovy-based UI automation focused on procurement and fulfillment regressions."
+        ],
+        "images": [],
+        "teammates": [ "Rebecca Villestas", "Rex Raymond Flores", "Nathaniel Santiago", "Sean Co", "Garmond Bacolod", "Erwin Cabrera", "Anton Louis Morana", "Ryan Go" ],
+        "technologies": [ "Oracle NetSuite", "Supply Chain Management SuiteApp", "SuiteScript 2.x", "Saved Searches", "Inventory Workflows", "E2E/CVT Testing", "Jest", "Groovy UI Automation" ],
+        "url": "",
+        "date": {
+            "start": {
+                "year": 2025,
+                "month": 10
+            },
+            "end": {
+                "year": 2026,
+                "month": 4
+            }
+        }
+    },
+    {
+        "name": "Warranty and Repairs Management (WRM)",
+        "cover": "",
+        "description": "Oracle NetSuite - SuiteApp (Template)",
+        "description_detailed": [
+            "Implemented and maintained WRM capabilities for warranty claim handling, repair lifecycle states, and service transaction updates.",
+            "Triaged customer and support-reported WRM defects, reproduced issues in sandbox data sets, and coordinated remediation through release cycles.",
+            "Validated WRM releases using E2E/CVT scenarios, Jest unit tests, and Groovy UI automation focused on claim and repair flow stability."
+        ],
+        "images": [],
+        "teammates": [ "Rebecca Villestas", "Rex Raymond Flores", "Nathaniel Santiago", "Sean Co", "Garmond Bacolod", "Erwin Cabrera", "Anton Louis Morana", "Ryan Go" ],
+        "technologies": [ "Oracle NetSuite", "Warranty and Repairs Management SuiteApp", "SuiteScript 2.x", "RMA/Repair Workflows", "Transaction Workflows", "E2E/CVT Testing", "Jest", "Groovy UI Automation" ],
+        "url": "",
+        "date": {
+            "start": {
+                "year": 2025,
+                "month": 10
+            },
+            "end": {
+                "year": 2026,
+                "month": 4
+            }
+        }
+    },
+    {
+        "name": "Transaction Email Capture (TEC)",
+        "cover": "",
+        "description": "Oracle NetSuite - SuiteApp (Template)",
+        "description_detailed": [
+            "Implemented and maintained TEC features for inbound email parsing, transaction linkage, and downstream capture processing.",
+            "Triaged customer and support-reported capture failures, reproduced parsing edge cases in sandbox environments, and coordinated fixes with Product and Technical Writing.",
+            "Validated TEC releases with E2E/CVT scenarios, Jest unit tests, and Groovy UI automation to protect email-to-transaction capture quality."
+        ],
+        "images": [],
+        "teammates": [ "Rebecca Villestas", "Rex Raymond Flores", "Nathaniel Santiago", "Sean Co", "Garmond Bacolod", "Erwin Cabrera", "Anton Louis Morana", "Ryan Go" ],
+        "technologies": [ "Oracle NetSuite", "Transaction Email Capture SuiteApp", "SuiteScript 2.x", "Inbound Email Processing", "Message Parsing", "E2E/CVT Testing", "Jest", "Groovy UI Automation" ],
+        "url": "",
+        "date": {
+            "start": {
+                "year": 2025,
+                "month": 10
+            },
+            "end": {
+                "year": 2026,
+                "month": 4
+            }
+        }
+    },
+    {
         "name": "H&M Sweden Automation Use Case Development",
         "cover": "",
         "description": "EY GDS Philippines - H&M Sweden",

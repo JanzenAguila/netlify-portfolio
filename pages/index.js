@@ -30,7 +30,7 @@ function getExperienceYears() {
     .filter(Boolean)
     .reduce((minYear, currentYear) => Math.min(minYear, currentYear), new Date().getFullYear());
 
-  return Math.max(1, new Date().getFullYear() - earliestYear + 1);
+  return Math.max(1, new Date().getFullYear() - earliestYear);
 }
 
 function getTopSkills(limit = 12) {
@@ -63,6 +63,7 @@ function isShowcaseProject(project) {
 export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [visibleSections, setVisibleSections] = useState({});
+  const [activeDocument, setActiveDocument] = useState(null);
   const [expanded, setExpanded] = useState({
     experience: {},
     projects: {},
@@ -73,8 +74,29 @@ export default function Home() {
 
   const yearsOfExperience = getExperienceYears();
   const coreRolesCount = experiences.filter((item) => !OFFICIAL_EXCLUDE_IDS.has(item.id)).length;
-  const topSkills = getTopSkills();
-  const featuredProjects = projects.filter(isShowcaseProject).slice(0, 6);
+  const topSkills = useMemo(() => {
+    const prioritizedStrengths = [
+      'Backend API Development',
+      'NodeJS',
+      'JavaScript',
+      'Python',
+      'OpenAI API Integration',
+      'RAG Workflows',
+      'GenAI Automation',
+      'API Integration',
+      'GraphQL',
+      'SQL',
+      'ReactJS',
+      'Automation Consulting',
+      'Jest',
+      'E2E/CVT Testing',
+      'SuiteScript 2.x',
+      'Oracle NetSuite',
+    ];
+
+    return [...new Set([...prioritizedStrengths, ...getTopSkills(24)])].slice(0, 16);
+  }, []);
+  const featuredProjects = projects.filter(isShowcaseProject).slice(0, 10);
   const timelineExperiences = useMemo(
     () =>
       [...experiences].sort((a, b) => {
@@ -95,9 +117,9 @@ export default function Home() {
   };
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
   const profileTitle = 'Janzen Aguila | Software Engineer';
-  const roleLine = 'Software Engineer | AI-Enabled Automation Consultant | SuiteScript & API Developer';
+  const roleLine = 'Software Engineer | AI-Enabled Automation Consultant | Backend API & GenAI Developer';
   const seoDescription =
-    'Portfolio of Janzen Aguila, a Software Engineer and AI-Enabled Automation Consultant focused on SuiteScript, APIs, GenAI-enabled workflows, and enterprise-ready web solutions.';
+    'Portfolio of Janzen Aguila, a Software Engineer and AI-Enabled Automation Consultant focused on backend API development, GenAI-enabled workflows, and enterprise-grade JavaScript/Python solutions.';
   const ogImagePath = '/janzen-aguila.png';
   const canonicalUrl = siteUrl ? `${siteUrl.replace(/\/$/, '')}/` : null;
   const ogImageUrl = siteUrl ? `${siteUrl.replace(/\/$/, '')}${ogImagePath}` : null;
@@ -128,6 +150,31 @@ export default function Home() {
     document.body.setAttribute('data-theme', nextTheme);
     window.localStorage.setItem('site-theme', nextTheme);
   }, [isDarkMode]);
+
+  useEffect(() => {
+    if (typeof document === 'undefined') return;
+    if (!activeDocument) return;
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [activeDocument]);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    if (!activeDocument) return;
+
+    const onKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        setActiveDocument(null);
+      }
+    };
+
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+  }, [activeDocument]);
 
   useEffect(() => {
     if (typeof window === 'undefined' || !('IntersectionObserver' in window)) {
@@ -173,22 +220,42 @@ export default function Home() {
 
   const heroActions = useMemo(
     () => (
-      <div className={styles.heroActions}>
-        <a className={styles.primaryAction} href={primaryLinks.email}>
-          Email Me
-        </a>
-        <a className={styles.secondaryAction} href={primaryLinks.linkedin} target="_blank" rel="noreferrer">
-          LinkedIn
-        </a>
-        <a className={styles.secondaryAction} href={primaryLinks.github} target="_blank" rel="noreferrer">
-          GitHub
-        </a>
-        <a className={styles.secondaryAction} href={RESUME_DOWNLOAD_PATH} download>
-          Download Resume
-        </a>
-        <a className={styles.secondaryAction} href={CV_DOWNLOAD_PATH} download>
-          Download CV
-        </a>
+      <div className={styles.heroActionGroups}>
+        <div className={styles.heroActions}>
+          <a className={styles.primaryAction} href={primaryLinks.email}>
+            Email Me
+          </a>
+          <a className={styles.secondaryAction} href={primaryLinks.linkedin} target="_blank" rel="noreferrer">
+            LinkedIn
+          </a>
+          <a className={styles.secondaryAction} href={primaryLinks.github} target="_blank" rel="noreferrer">
+            GitHub
+          </a>
+        </div>
+        <div className={styles.documentActions}>
+          <div className={styles.documentActionRow}>
+            <button
+              type="button"
+              className={`${styles.secondaryAction} ${styles.actionButton}`}
+              onClick={() => {
+                setActiveDocument({ key: 'resume', title: 'Resume', url: RESUME_DOWNLOAD_PATH });
+              }}
+            >
+              View Resume
+            </button>
+          </div>
+          <div className={styles.documentActionRow}>
+            <button
+              type="button"
+              className={`${styles.secondaryAction} ${styles.actionButton}`}
+              onClick={() => {
+                setActiveDocument({ key: 'cv', title: 'CV', url: CV_DOWNLOAD_PATH });
+              }}
+            >
+              View CV
+            </button>
+          </div>
+        </div>
       </div>
     ),
     [primaryLinks.email, primaryLinks.github, primaryLinks.linkedin]
@@ -213,6 +280,8 @@ export default function Home() {
       },
     }));
   };
+
+  const pdfFrameSrc = activeDocument ? activeDocument.url : '';
 
   return (
     <>
@@ -390,7 +459,7 @@ export default function Home() {
                   {expanded.projects[project.name] ? (
                     <>
                       <ul>
-                        {(project.description_detailed || []).slice(0, 2).map((line) => (
+                        {(project.description_detailed || []).map((line) => (
                           <li key={line}>{line}</li>
                         ))}
                       </ul>
@@ -521,6 +590,37 @@ export default function Home() {
           </section>
         </main>
       </div>
+
+      {activeDocument ? (
+        <div className={styles.modalBackdrop} role="presentation" onClick={() => setActiveDocument(null)}>
+          <div
+            className={styles.pdfModal}
+            role="dialog"
+            aria-modal="true"
+            aria-label={`${activeDocument.title} viewer`}
+            onClick={(event) => event.stopPropagation()}
+          >
+            <div className={styles.pdfModalHeader}>
+              <h3>{activeDocument.title}</h3>
+              <div className={styles.pdfControlRow}>
+                <a className={styles.pdfDownload} href={activeDocument.url} download>
+                  Download
+                </a>
+                <button
+                  type="button"
+                  className={styles.pdfControlButton}
+                  onClick={() => setActiveDocument(null)}
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+            <div className={styles.pdfViewport}>
+              <iframe className={styles.pdfFrame} src={pdfFrameSrc} title={activeDocument.title} />
+            </div>
+          </div>
+        </div>
+      ) : null}
     </>
   );
 }
