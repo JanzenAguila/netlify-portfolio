@@ -1,5 +1,23 @@
 [
     {
+        "id": "/#asurion",
+        "name": "Asurion Hong Kong Limited ROHQ",
+        "description": [
+            "Build enterprise applications using Java, React, Vite, and SQL, including core operations tools.",
+            "Use AI-assisted development workflows and coordinate code reviews, API testing, and releases across UI, API, and SQL layers."
+        ],
+        "logo": "",
+        "role": "AI-Native Software Engineer",
+        "start": {
+            "month": "July",
+            "day": 1,
+            "year": 2026
+        },
+        "end": null,
+        "technologies": [ "Java", "ReactJS", "Vite", "SQL", "Cursor", "Claude Code", "JIRA", "Figma", "Playwright", "API Testing" ],
+        "url": "https://www.asurion.com/"
+    },
+    {
         "id": "/#netsuite",
         "name": "Oracle NetSuite",
         "description": [

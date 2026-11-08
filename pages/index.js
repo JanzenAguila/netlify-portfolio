@@ -77,6 +77,10 @@ export default function Home() {
   const coreRolesCount = experiences.filter((item) => !OFFICIAL_EXCLUDE_IDS.has(item.id)).length;
   const topSkills = useMemo(() => {
     const prioritizedStrengths = [
+      'Java',
+      'ReactJS',
+      'Vite',
+      'SQL',
       'Backend API Development',
       'NodeJS',
       'JavaScript',
@@ -118,9 +122,9 @@ export default function Home() {
   };
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
   const profileTitle = 'Janzen Aguila | Software Engineer';
-  const roleLine = 'Software Engineer | AI-Enabled Automation Consultant | Backend API & GenAI Developer';
+  const roleLine = 'AI-Native Software Engineer at Asurion | Backend API & Automation Developer';
   const seoDescription =
-    'Portfolio of Janzen Aguila, a Software Engineer and AI-Enabled Automation Consultant focused on backend API development, GenAI-enabled workflows, and enterprise-grade JavaScript/Python solutions.';
+    'Portfolio of Janzen Aguila, an AI-Native Software Engineer at Asurion with experience in backend APIs, automation, and enterprise applications.';
   const ogImagePath = '/janzen-aguila.png';
   const canonicalUrl = siteUrl ? `${siteUrl.replace(/\/$/, '')}/` : null;
   const ogImageUrl = siteUrl ? `${siteUrl.replace(/\/$/, '')}${ogImagePath}` : null;
@@ -128,11 +132,11 @@ export default function Home() {
     '@context': 'https://schema.org',
     '@type': 'Person',
     name: 'Janzen Christian Aguila',
-    jobTitle: 'Software Engineer',
+    jobTitle: 'AI-Native Software Engineer',
     description: seoDescription,
     url: canonicalUrl || undefined,
     sameAs: [primaryLinks.linkedin, primaryLinks.github].filter(Boolean),
-    knowsAbout: ['Software Engineering', 'Automation Consulting', 'SuiteScript', 'API Development', 'Generative AI'],
+    knowsAbout: ['Software Engineering', 'Java', 'React', 'SQL', 'Automation Consulting', 'SuiteScript', 'API Development', 'Generative AI'],
   };
 
   useEffect(() => {
@@ -339,9 +343,8 @@ export default function Home() {
               <p className={styles.kicker}>{roleLine}</p>
               <h1>Janzen Christian Aguila</h1>
               <p className={styles.heroCopy}>
-                I design and build practical software solutions that help teams move faster, reduce repetitive work,
-                and ship reliably. I blend engineering, automation, and business context to deliver useful products
-                from idea to production.
+                I build enterprise applications at Asurion using Java, React, Vite, and SQL. My earlier work spans
+                Oracle NetSuite SuiteApps, backend development, and AI-enabled automation for global clients.
               </p>
               {heroActions}
             </div>
@@ -411,15 +414,17 @@ export default function Home() {
                       </p>
                       <p className={styles.subtle}>{formatDateRange(item.start, item.end)}</p>
                     </div>
-                    <Image
-                      src={`/${item.logo || 'janzen-aguila.png'}`}
-                      alt={`${item.name} logo`}
-                      className={styles.companyLogo}
-                      width={62}
-                      height={62}
-                      sizes="62px"
-                      loading="lazy"
-                    />
+                    {item.logo ? (
+                      <Image
+                        src={`/${item.logo}`}
+                        alt={`${item.name} logo`}
+                        className={styles.companyLogo}
+                        width={62}
+                        height={62}
+                        sizes="62px"
+                        loading="lazy"
+                      />
+                    ) : null}
                   </div>
                   <ul>
                     {(item.description || []).map((line) => (
