@@ -415,15 +415,17 @@ export default function Home() {
                       <p className={styles.subtle}>{formatDateRange(item.start, item.end)}</p>
                     </div>
                     {item.logo ? (
-                      <Image
-                        src={`/${item.logo}`}
-                        alt={`${item.name} logo`}
-                        className={styles.companyLogo}
-                        width={62}
-                        height={62}
-                        sizes="62px"
-                        loading="lazy"
-                      />
+                      <div className={`${styles.companyLogoFrame} ${item.id === '/#asurion' ? styles.asurionLogoFrame : ''}`}>
+                        <Image
+                          src={`/${item.logo}`}
+                          alt={`${item.name} logo`}
+                          className={`${styles.companyLogo} ${item.id === '/#asurion' ? styles.asurionLogo : ''}`}
+                          width={item.id === '/#asurion' ? 112 : 62}
+                          height={item.id === '/#asurion' ? 45 : 62}
+                          sizes={item.id === '/#asurion' ? '112px' : '62px'}
+                          loading={item.id === '/#asurion' ? 'eager' : 'lazy'}
+                        />
+                      </div>
                     ) : null}
                   </div>
                   <ul>

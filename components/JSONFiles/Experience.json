@@ -6,7 +6,7 @@
             "Build enterprise applications using Java, React, Vite, and SQL, including core operations tools.",
             "Use AI-assisted development workflows and coordinate code reviews, API testing, and releases across UI, API, and SQL layers."
         ],
-        "logo": "",
+        "logo": "asurion-logo-white.png",
         "role": "AI-Native Software Engineer",
         "start": {
             "month": "July",

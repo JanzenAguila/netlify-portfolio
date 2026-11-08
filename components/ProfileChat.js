@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { FaArrowUp, FaTimes } from 'react-icons/fa';
 import styles from './ProfileChat.module.css';
 
 const starters = ['What has Janzen worked on?', 'Why did he move from RPA to software development?', 'What work opportunities interest him?'];
@@ -52,7 +53,7 @@ export default function ProfileChat() {
         <section id="profile-chat" className={styles.panel} role="region" aria-labelledby="chat-heading" onKeyDown={event => { if (event.key === 'Escape') { event.stopPropagation(); close(); } }}>
           <header className={styles.header}>
             <div><h2 id="chat-heading">Ask about Janzen</h2><span>His work, projects, and approach to learning</span></div>
-            <button type="button" onClick={close} aria-label="Close chat">×</button>
+            <button className={styles.closeIcon} type="button" onClick={close} aria-label="Close chat"><FaTimes aria-hidden="true" /></button>
           </header>
           <p className={styles.notice}>AI assistant · May make mistakes. Messages are sent to OpenRouter. Chat history stays in this page session.</p>
           <div className={styles.messages} ref={log} role="log" aria-live="polite" aria-relevant="additions">
@@ -63,12 +64,15 @@ export default function ProfileChat() {
           {error && <p className={styles.error} role="alert">{error}</p>}
           <form className={styles.form} onSubmit={event => { event.preventDefault(); send(input); }}>
             <label className={styles.label} htmlFor="chat-message">Your question about Janzen</label>
-            <div className={styles.inputRow}><input id="chat-message" ref={field} value={input} maxLength={2000} onChange={event => setInput(event.target.value)} placeholder="Ask about Janzen…" autoComplete="off" /><button type="submit" disabled={busy || !input.trim()}>Send</button></div>
+            <div className={styles.inputRow}><input id="chat-message" ref={field} value={input} maxLength={2000} onChange={event => setInput(event.target.value)} placeholder="Ask about Janzen…" autoComplete="off" /><button className={styles.sendIcon} type="submit" aria-label="Send message" disabled={busy || !input.trim()}><FaArrowUp aria-hidden="true" /></button></div>
             <button className={styles.reset} type="button" disabled={busy || !messages.length} onClick={() => { setMessages([]); setError(''); setInput(''); field.current?.focus(); }}>Clear conversation</button>
           </form>
         </section>
       )}
-      <button ref={launcher} type="button" className={styles.launcher} aria-controls="profile-chat" aria-expanded={open} onClick={() => open ? close() : setOpen(true)}>{open ? 'Close chat' : 'Ask about Janzen'}</button>
+      <button ref={launcher} type="button" className={styles.launcher} aria-label={open ? 'Close chat' : 'Ask about Janzen'} aria-controls="profile-chat" aria-expanded={open} onClick={() => open ? close() : setOpen(true)}>
+        <span className={styles.launcherLabel} aria-hidden="true">{open ? 'Close chat' : 'Ask about Janzen'}</span>
+        <span className={styles.launcherMark} aria-hidden="true">{open ? <FaTimes /> : 'JA'}</span>
+      </button>
     </aside>
   );
 }
