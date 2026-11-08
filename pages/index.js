@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { FaFacebookF, FaGithub, FaLinkedinIn, FaMailBulk, FaMoon, FaSkype, FaSun } from 'react-icons/fa';
 import styles from '@styles/Portfolio.module.css';
+import ProfileChat from '@components/ProfileChat';
 
 const experiences = require('components/JSONFiles/Experience.json');
 const projects = require('components/JSONFiles/Projects.json');
@@ -589,6 +590,7 @@ export default function Home() {
             </div>
           </section>
         </main>
+        <ProfileChat />
       </div>
 
       {activeDocument ? (
